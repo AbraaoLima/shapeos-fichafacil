@@ -2,6 +2,7 @@
   "name": "ShapeOS · Ficha Fácil",
   "short_name": "ShapeOS",
   "description": "Gestão de treinos e consultoria para personal trainers e alunos.",
+  "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
