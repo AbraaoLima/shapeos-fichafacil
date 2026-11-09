@@ -123,11 +123,7 @@ export async function updateSession(request: NextRequest) {
     url.search = ''
     url.searchParams.set('error', status === 'PENDENTE' ? 'pendente' : 'bloqueado')
 
-    const redirect = NextResponse.redirect(url)
-    response.cookies.getAll().forEach((cookie) => {
-      redirect.cookies.set(cookie.name, cookie.value)
-    })
-    return redirect
+    return redirectWithSession(url)
   }
 
   if (tipo === 'ADMIN') {
